@@ -1,21 +1,12 @@
-*{
-    margin: 5px;
-    border-radius: 10px;
+table{
+    background-color: rgb(213, 213, 236);
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 10;
+    width: 97%;
 }
-title{
-    color: blue;
-}
-header{
-    background-color: rgb(226, 241, 241);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: blue;
+th, td{
+    border: solid 3px blue;
+    padding: 0%;
 }
 
-footer{
-    text-align: center;
-    background-color: rgb(15, 13, 13);
-    color: ivory;
-    padding: 10px;
-}
