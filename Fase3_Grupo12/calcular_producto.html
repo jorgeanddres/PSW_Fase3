@@ -77,38 +77,40 @@
     </h4>
     <!-- Codigo calculadora -->
 
-    <table style="width: 600px; margin: 0% auto;">
-      <thead>
-          <tr>
-              <th><div class="container">
+    <script>
+              
+      // Calculo del % utilidad e IVA
+    function porcentaje(){
+        
+        var a = document.f1.a.value;
+        var b = document.f1.b.value;
+        var c = document.f1.c.value;
+        var r = document.f1.d.value;
+       r=parseFloat(a)*(parseFloat(b)/100);
+       document.f1.d.value=r;
+       r=parseFloat(a)*(parseFloat(c)/100);
+       document.f1.e.value=r;
+    
+        // Calculo de la venta
+       var a = document.f1.a.value;
+       var d = document.f1.d.value;
+       var e = document.f1.e.value;
+       var r = document.f1.f.value;
+       r=parseFloat(a)+parseFloat(d)+parseFloat(e);
+       document.f1.f.value=r;
+         
+    }
+    
+    </script> 
 
-                <h3 style="color: blue;"><marquee>Control Sobre La Venta</marquee></h3>
+<table style="width: 600px; margin: 0% auto;">
+  <thead>
+    <tr>
+      <td>
+        <div  class="container">
+          <h3 style="color: blue;"><marquee>Control Sobre La Venta</marquee></h3>
               
-              <script>
               
-                // Calculo del % utilidad e IVA
-              function porcentaje(){
-                  
-                  var a = document.f1.a.value;
-                  var b = document.f1.b.value;
-                  var c = document.f1.c.value;
-                  var r = document.f1.d.value;
-                 r=parseFloat(a)*(parseFloat(b)/100);
-                 document.f1.d.value=r;
-                 r=parseFloat(a)*(parseFloat(c)/100);
-                 document.f1.e.value=r;
-              
-                  // Calculo de la venta
-                 var a = document.f1.a.value;
-                 var d = document.f1.d.value;
-                 var e = document.f1.e.value;
-                 var r = document.f1.f.value;
-                 r=parseFloat(a)+parseFloat(d)+parseFloat(e);
-                 document.f1.f.value=r;
-                   
-              }
-              
-              </script> 
               
               <form name="f1" action="calculadora.html" method="POST">
                   <div class="form-group">
@@ -136,11 +138,12 @@
                 </div>
               
                 </form>
-             
-              </div>
-            </th>
-          </tr>
+        </div>
+        
+      </td>
+    </tr>
+  </thead>
+</table>
 
-    
   </body>
 </html>
