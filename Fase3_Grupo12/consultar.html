@@ -48,9 +48,17 @@
                 <li><a class="dropdown-item" href="consultar.html">Consultar Productos</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="administrador.html">Administrador</a>
-            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Administrador
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="php/crearBD.php">Crear Base De Datos</a></li>
+                <li> <a class="dropdown-item" href="php/crearTABLA.php">Crear Una Tabla</a></li>
+                <li><a class="dropdown-item" href="php/crearPDF.php">Generar Reporte PDF</a></li>
+                <li> <a class="dropdown-item" href="php/crearBACKUP.php">Realizar Backup</a></li>
+              </ul>
+            </li >
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Escriba aqui..." aria-label="Search">
@@ -74,30 +82,15 @@
     <div class="container">
       <h2>Formulario Consulta Del Producto</h2>
       <p><U>Ingrese los valores requeridos</U>:</p>
-      <form action="#" method="post">
+      <form action="php/consultar_producto.php" method="post">
         <div class="form-group">
           <label for="usr"><B>Codigo Producto:</B></label>
-          <input type="number" class="form-control" id="usr" name="codigo" style="width:300px">
+          <input type="number" class="form-control" id="codigo" name="codigo" style="width:300px">
         </div>
         <button type="submit" class="btn btn-primary"><B>Consultar Producto</B></button>
         <BR></BR>
         <HR></HR>
-        <div class="form-group">
-          <label for="pwd"><B>Nombre</B>:</label>
-          <input type="text" class="form-control" id="pwd" name="nombre" style="width:600px" >
-        </div>
-        <div class="form-group">
-          <label for="pwd"><B>Marca:</B></label>
-          <input type="text" class="form-control" id="pwd" name="marca" style="width:600px">
-        </div>
-        <div class="form-group">
-          <label for="pwd"><B>Precio:</B></label>
-          <input type="number" class="form-control" id="pwd" name="precio" style="width:600px">
-        </div>
-        <div class="form-group">
-          <label for="pwd"><B>Cantidad:</B></label>
-          <input type="number" class="form-control" id="pwd" name="cantidad" style="width:600px">
-        </div>
+        
       </form>
     </div>
   </body>
